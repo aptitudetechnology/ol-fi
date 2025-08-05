@@ -78,6 +78,12 @@ The Ol-Fi protocol follows a four-layer architecture:
 - **Propagation**: Diffusion through porous matrix
 - **Bandwidth**: 5-50 distinct MVOC channels
 
+#### 3.1.4 Micro-scale Transmission
+* **Medium:** Intercellular space, biofilms, or cell culture media in microfluidic devices.
+* **Range:** 1 μm to 100 μm. This short range is ideal for direct, cell-to-cell signaling or communication within a dense cell population.
+* **Propagation:** Primarily molecular diffusion, which is highly efficient over very short distances.
+* **Bandwidth:** 100-10,000 distinct MVOC channels. The short range and minimal interference allow for a higher density of unique chemical signals.
+
 ### 3.2 Signal Characteristics
 
 #### 3.2.1 Frequency Allocation
@@ -91,6 +97,18 @@ The Ol-Fi protocol follows a four-layer architecture:
 - **Digital**: Multi-level concentration states (2-16 discrete levels)
 
 ## 4. Chemical Layer Specification
+
+## 3.3 Cross-Scale Communication
+
+The Ol-Fi protocol supports scenarios where senders and receivers operate at different physical scales, such as a micrometer-scale sender communicating with a millimeter-scale receiver. This is common in synthetic biology and tissue engineering.
+
+### Scenario: Micrometer-Scale Sender to Millimeter-Scale Receiver
+* **Sender:** A single cell or a small cluster of cells (1-100 μm) engineered to release MVOCs in response to a specific trigger, acting as a local signal source.
+* **Channel:** MVOCs diffuse through the local medium (e.g., liquid, tissue matrix), with signal attenuation over distance.
+* **Receiver:** A larger, multicellular system (e.g., biofilm, tissue scaffold, or engineered organoid at mm scale) designed to detect MVOCs.
+* **Detection Mechanism:** The receiver is not a single point but a distributed, population-level response. Cells across the receiver's area have receptors for MVOCs, and their integrated response (e.g., gene expression change or bulk physiological shift) constitutes signal reception. The receiver's size enables detection of weakened, dispersed signals that single cells might miss.
+
+This cross-scale communication leverages the protocol's **Concentration Gradient Encoding** (Section 4.2.2) and **Population Dynamics** (Section 6.1.3). The millimeter-scale receiver interprets MVOC concentrations over its surface to determine signal strength and origin, enabling robust, collective responses.
 
 ### 4.1 Frame Structure
 
