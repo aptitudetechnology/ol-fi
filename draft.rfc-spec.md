@@ -328,3 +328,6 @@ This document is a draft specification for the Ol-Fi protocol in computational b
 **Copyright Notice**
 
 This document and the information contained herein is provided on an "AS IS" basis and THE AUTHORS DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS.
+
+
+please update to cover communication at the micrometer scale
