@@ -10,7 +10,7 @@ plt.style.use('default')
 plt.rcParams['font.size'] = 10
 
 # Create output directory if it doesn't exist
-output_dir = "bio_lifi_diagrams"
+output_dir = "olfi_diagrams"
 os.makedirs(output_dir, exist_ok=True)
 
 def save_and_close(filename):
