@@ -135,29 +135,41 @@ The limitations of current, reactive biofouling countermeasures necessitate a re
 4.1. Introducing Extremophiles as Bio-Catalysts
 
 Extremophiles are organisms that thrive in environments once thought to be hostile to life, such as extreme temperatures, pressures, or chemical compositions.29 They have evolved a suite of unique adaptations that make them biologically pre-engineered to survive and function in the very conditions that pose the greatest challenges to conventional cooling systems.
+![Bioluminescent Control Mechanisms](../bio_lifi_diagrams/01_bioluminescent_control_mechanisms.png)
+*Figure: Bioluminescent control mechanisms relevant to extremophile bio-catalysts.*
 Hyperthermophiles, for example, are organisms that flourish in extremely hot environments, typically at temperatures above 60°C, with some able to survive and grow above 120°C.30 Their existence at these temperatures is made possible by hyperthermostable proteins and unique cell membranes that maintain structural integrity and function under heat that would denature other life forms.30 These organisms represent an ideal candidate for high-temperature liquid cooling environments, as they would be naturally suited to the thermal conditions that conventional mesophilic bacteria find so hospitable.
 Similarly, psychrophiles, which thrive in cold conditions below 15°C, have evolved "cold-adapted" enzymes, or psychrozymes, that possess high catalytic activity at low temperatures.31 This could make them invaluable for applications where cooling systems operate at or below ambient temperatures, as their enzymes would remain active in conditions where other biological agents would become dormant. Other extremophiles, such as acidophiles, alkaliphiles, and halophiles, have adaptations to survive in high/low pH or high-salinity environments, respectively.31 The existence of these organisms, which have already solved the challenges of environmental extremes, presents an opportunity to harness their evolved biochemistry as a novel form of bio-catalyst. Their enzymes are catalytically stable and robust under conditions that would render most biological agents useless, providing a foundation for a new class of solutions that are far more resilient and effective than current chemical additives.31
 
 4.2. Engineered Solutions for Biofilm Management and Performance Enhancement
 
 The application of extremophiles and their unique properties could be a transformative solution for liquid cooling systems, moving beyond a defensive strategy and toward an active, integrated one.
+![Multi Wavelength Channels](../bio_lifi_diagrams/02_multi_wavelength_channels.png)
+*Figure: Multi-wavelength channels for engineered biofilm management.*
 
 4.2.1. "Good" Biofilms for Corrosion Protection
 
 The concept of a "biofilm" needs to be redefined from an unqualified negative to a controllable, functional material. While many biofilms cause corrosion, a growing body of research shows that certain biofilms can actively inhibit it. The key lies in the selective cultivation of specific, non-corrosive organisms. These "good" biofilms can form a physical barrier on a metal surface, blocking corrosive agents like oxygen from reaching the metal.32 The Extracellular Polymeric Substances (EPS) of these biofilms can even adsorb corrosive agents and prevent the adhesion of other, more destructive microbes.32 For example, studies have shown that biofilms from
 Tenacibaculum mesophilum D-6 and Bacillus sp. Y-6 effectively inhibited corrosion on carbon steel by consuming oxygen on the metal surface and by using their EPS as a protective barrier.32 The corrosion inhibition effect was found to be positively correlated with the density and thickness of the biofilm, with
 T. mesophilum D-6, which formed a denser biofilm, showing a greater protective effect.32
+![Photoreceptor Network Structure](../bio_lifi_diagrams/03_photoreceptor_network_structure.png)
+*Figure: Photoreceptor network structure in engineered biofilms.*
 This suggests a strategy where a system is intentionally inoculated with a benign, corrosion-inhibiting organism. This introduced organism would need to be engineered to outcompete and dominate any naturally occurring, corrosive species, such as Sulphate-Reducing Bacteria (SRB), which are a major cause of MIC.15 A study showed that certain nitrate-reducing bacteria could outcompete highly corrosive SRB, reducing corrosion.33 This approach transforms the passive material protection of a system into an active, self-repairing biological defense, using the very mechanism—biofilm formation—that has historically been the primary problem.
 
 4.2.2. Enzyme-Based Bio-Cleansing
 
 Traditional chemical cleaners and biocides often pose a risk of corrosion or require a specific pH range, making them incompatible with long-term system health.8 Bio-cleansing, a process that uses enzymes to break down organic matter, offers a compelling alternative. Enzyme cleaners are non-corrosive, non-toxic, and specifically target organic contaminants like mold, mildew, and bacteria without harming the underlying system components.34
 The efficacy and durability of these enzymes can be significantly enhanced through immobilization. By anchoring enzymes to solid supports, their thermal and operational stability are increased, making them reusable and more robust for industrial applications.35 For example, immobilized catalase has been shown to retain higher activity at elevated temperatures than its free-floating counterpart.35 The use of extremophile-derived enzymes, or "extremozymes," would further enhance this approach. As discussed earlier, these enzymes are naturally adapted for stability at the high temperatures of liquid cooling systems, providing a durable and continuously active cleaning mechanism.31 Rather than periodic chemical treatments, a system could be designed with immobilized extremozymes as a permanent component, continuously degrading any organic matter that enters the coolant loop.
+![System Architecture](../bio_lifi_diagrams/04_system_architecture.png)
+*Figure: System architecture for enzyme-based bio-cleansing.*
 
 4.2.3. Bio-Enhanced Heat Transfer
 
 While biofouling is universally known to degrade heat transfer, a speculative but logical third-order application of extremophiles could be to intentionally engineer a system for enhanced heat transfer. Biofilms act as thermal insulators because their EPS matrix is a poor conductor of heat, being over 90% water.3 This fundamental principle raises a question: could an extremophile be engineered to produce an EPS or other secreted compound that enhances, rather than inhibits, heat transfer?
+![Signal Transduction Timeline](../bio_lifi_diagrams/05_signal_transduction_timeline.png)
+*Figure: Signal transduction timeline for bio-enhanced heat transfer.*
 This would represent a significant inversion of the current understanding of biofouling. Instead of merely preventing a thermal penalty, a "good" organism could be cultivated to produce a stable, non-adhering polymer or other compound that, when suspended in a coolant, increases its thermal conductivity. Alternatively, a genetically engineered microbe could be designed to colonize the laminar boundary layer of a heat exchanger, actively preventing the adhesion of insulating debris and scale. This could create a system that not only prevents thermal degradation but also actively improves thermal performance over time. This approach moves beyond simple problem mitigation and into the realm of truly novel, bio-driven innovation.
+![Event Driven Communication](../bio_lifi_diagrams/06_event_driven_communication.png)
+*Figure: Event-driven communication in bio-LiFi systems.*
 Table 3: Extremophile Properties and Proposed Applications
 
 Extremophile Class
@@ -185,16 +197,22 @@ Anaerobic MIC, oxygen diffusion, adhesion of corrosive microbes 32
 5. Feasibility and Forward-Looking Analysis
 
 The concept of using extremophiles for liquid cooling is a powerful idea, but its realization is contingent upon overcoming significant regulatory, ethical, and technical hurdles. This forward-looking analysis must consider these challenges in a holistic and strategic manner.
+![Environmental Sensitivity](../bio_lifi_diagrams/07_environmental_sensitivity.png)
+*Figure: Environmental sensitivity in bio-LiFi and extremophile systems.*
 
 5.1. The Regulatory and Ethical Landscape
 
 The intentional introduction of microorganisms, especially genetically engineered ones, into commercial products or industrial systems moves the problem from a simple engineering challenge to a complex issue of public health and environmental regulation. In the United States, the regulation of genetically engineered organisms (GMOs) is managed by a multi-agency framework, including the Environmental Protection Agency (EPA), the Food and Drug Administration (FDA), and the U.S. Department of Agriculture (USDA).36 The EPA, for example, is responsible for regulating pesticides, which would include any microorganism used as a biocide or corrosion inhibitor in a cooling system.37
+![Protocol Stack](../bio_lifi_diagrams/08_protocol_stack.png)
+*Figure: Protocol stack for regulatory and ethical considerations in bio-LiFi systems.*
 The intentional release of novel organisms, even for beneficial purposes like bioremediation, has been a subject of scientific and public debate for decades.39 The introduction of a "good" biofilm-forming organism, for instance, would require rigorous testing and regulatory approval to ensure it does not become pathogenic, outcompete local flora in the event of a leak, or produce unintended byproducts that could be toxic to humans or the environment. Strict containment protocols, including dedicated facilities, negative air pressure, and the sterilization of all waste, would be required for any research and development involving these organisms.40
 The ethical dimension is also a significant consideration. The public may be wary of a new class of consumer products that contain living, or once-living, biological agents, particularly if they are genetically modified. Building public trust will require transparency, a clear demonstration of safety, and a robust regulatory process that is seen as credible and independent. The use of bio-engineered life, regardless of its intended benefit, represents a major non-trivial barrier to market entry that must be addressed from the earliest stages of research and development.
 
 5.2. Technical and Operational Hurdles
 
 The success of a bio-centric solution is predicated on a level of ecological control that is difficult to achieve, even in a seemingly closed system. The core challenge is to create a synthetic ecosystem where the introduced extremophile flourishes while all other organisms are excluded or outcompeted.
+![Synthetic Gene Circuit](../bio_lifi_diagrams/09_synthetic_gene_circuit.png)
+*Figure: Synthetic gene circuit for technical and operational control in bio-LiFi systems.*
 The first hurdle is the resilience of existing, naturally occurring biofilms. As research has shown, biofilms are difficult to eradicate, and some organisms can persist even after aggressive disinfection protocols.7 The efficacy of biocides is reduced in areas of low flow, such as dead legs, and under deposits, where the organisms are protected from the active agents.10 This means that simply "clearing" a system before introducing a new, beneficial organism may not be sufficient. The introduced extremophile would need to be engineered with a superior ability to colonize and adhere to surfaces, effectively outcompeting any residual, undesirable microbes.
 Furthermore, the stability of this new synthetic ecosystem is not guaranteed. The complex interplay of environmental factors—such as nutrient availability, pH, and the concentration of metal ions from the system itself—can significantly influence microbial growth and biofilm formation.17 A seemingly minor change in system chemistry, such as the introduction of a new corrosion inhibitor or a process leak, could compromise the viability of the "good" organism, allowing a "bad" organism to take its place. The risk is that the intended bio-solution could mutate, be displaced by a more competitive environmental immigrant, or create unintended metabolic byproducts that cause a new set of problems. This requires a level of precision engineering and continuous monitoring that goes far beyond current industry practices.
 
