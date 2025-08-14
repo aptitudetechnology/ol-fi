@@ -457,4 +457,136 @@ for name, x, y, width, color, details in phases:
 
 # Timeline arrow
 timeline_arrow = FancyArrowPatch((0.5, 4), (15.5, 4), arrowstyle='->', 
-                                mutation_scale=20, color
+                                mutation_scale=20, color='black', linewidth=2)
+ax9.add_patch(timeline_arrow)
+ax9.text(8, 3.5, 'Implementation Timeline (Years)', ha='center', fontweight='bold')
+
+# Add year markers
+for i, year in enumerate(range(1, 9)):
+    x_pos = 1 + i * 2
+    ax9.plot([x_pos, x_pos], [3.8, 4.2], 'k-', linewidth=2)
+    ax9.text(x_pos, 3.3, f'Year {year}', ha='center', fontweight='bold', fontsize=9)
+
+# Add risk/complexity indicators
+risk_levels = [
+    (3, 5, 'Medium Risk', 'lightblue'),
+    (6.5, 5, 'High Risk', 'yellow'),
+    (10, 5, 'Medium Risk', 'lightgreen'),
+    (13.5, 5, 'Low Risk', 'orange')
+]
+
+for x, y, risk, color in risk_levels:
+    risk_circle = Circle((x, y), 0.3, facecolor=color, edgecolor='black', alpha=0.7)
+    ax9.add_patch(risk_circle)
+    ax9.text(x, y, risk, ha='center', va='center', fontsize=8, fontweight='bold')
+
+# Add milestone markers
+milestones = [
+    (4, 2, 'Safety\nValidated'),
+    (7, 2, 'Pilot\nSuccess'),
+    (11, 2, 'Regulatory\nApproval'),
+    (14, 2, 'Market\nReady')
+]
+
+for x, y, milestone in milestones:
+    milestone_box = FancyBboxPatch((x-0.6, y-0.4), 1.2, 0.8, boxstyle="round,pad=0.05", 
+                                  facecolor='lightgray', edgecolor='black', linewidth=1)
+    ax9.add_patch(milestone_box)
+    ax9.text(x, y, milestone, ha='center', va='center', fontweight='bold', fontsize=8)
+
+ax9.set_xticks([])
+ax9.set_yticks([])
+ax9.axis('off')
+save_and_close("09_regulatory_framework_timeline")
+
+# 10. Case Study Comparison
+fig, ax10 = plt.subplots(figsize=(14, 10))
+ax10.set_xlim(0, 14)
+ax10.set_ylim(0, 12)
+ax10.set_title('Case Studies: Scale-Specific Implementation', fontweight='bold', fontsize=14)
+
+# Case study boxes
+case_studies = [
+    ('Data Center\nCooling', 2, 9.5, 'lightblue', 
+     '• 10MW facility\n• 24/7 operation\n• Critical reliability\n• High heat density'),
+    ('HVAC Systems', 7, 9.5, 'lightgreen', 
+     '• Commercial buildings\n• Seasonal operation\n• Moderate reliability\n• Variable load'),
+    ('Consumer Electronics', 12, 9.5, 'lightyellow', 
+     '• Personal devices\n• Intermittent use\n• Cost sensitive\n• Compact design'),
+    ('Automotive', 2, 6, 'lightcoral', 
+     '• Engine cooling\n• Variable conditions\n• Safety critical\n• Weight constraints'),
+    ('Industrial Process', 7, 6, 'lightgray', 
+     '• Manufacturing\n• Continuous operation\n• Chemical compatibility\n• High temperature'),
+    ('Aerospace', 12, 6, 'orange', 
+     '• Space applications\n• Extreme environments\n• Ultra-reliable\n• Minimal maintenance')
+]
+
+for name, x, y, color, details in case_studies:
+    case_box = FancyBboxPatch((x-1.5, y-1.2), 3, 2.4, boxstyle="round,pad=0.1", 
+                             facecolor=color, edgecolor='black', linewidth=2)
+    ax10.add_patch(case_box)
+    ax10.text(x, y+0.5, name, ha='center', va='center', fontweight='bold', fontsize=11)
+    ax10.text(x, y-0.3, details, ha='center', va='center', fontsize=9)
+
+# Implementation feasibility scores
+feasibility_data = [
+    ('Data Center', 85, 'High'),
+    ('HVAC', 75, 'Medium-High'),
+    ('Consumer', 45, 'Medium'),
+    ('Automotive', 60, 'Medium'),
+    ('Industrial', 90, 'High'),
+    ('Aerospace', 35, 'Low-Medium')
+]
+
+# Add feasibility indicators
+for i, (name, score, level) in enumerate(feasibility_data):
+    x_positions = [2, 7, 12, 2, 7, 12]
+    y_positions = [7.8, 7.8, 7.8, 4.3, 4.3, 4.3]
+    
+    # Color based on score
+    if score >= 80:
+        indicator_color = 'green'
+    elif score >= 60:
+        indicator_color = 'yellow'
+    else:
+        indicator_color = 'red'
+    
+    feasibility_circle = Circle((x_positions[i], y_positions[i]), 0.3, 
+                               facecolor=indicator_color, edgecolor='black', alpha=0.8)
+    ax10.add_patch(feasibility_circle)
+    ax10.text(x_positions[i], y_positions[i], f'{score}%', ha='center', va='center', 
+             fontweight='bold', fontsize=9, color='white' if score < 70 else 'black')
+
+# Add summary comparison table
+table_box = FancyBboxPatch((1, 1), 12, 2.5, boxstyle="round,pad=0.1", 
+                          facecolor='lightcyan', edgecolor='blue', linewidth=2)
+ax10.add_patch(table_box)
+
+table_header = 'Implementation Summary:\n'
+table_content = (
+    'High Feasibility: Data Centers (85%), Industrial Process (90%) - Controlled environments, high value applications\n'
+    'Medium Feasibility: HVAC (75%), Automotive (60%) - Moderate complexity, established infrastructure\n'
+    'Lower Feasibility: Consumer Electronics (45%), Aerospace (35%) - Cost constraints, extreme requirements'
+)
+
+ax10.text(7, 2.5, table_header, ha='center', va='center', fontweight='bold', fontsize=12)
+ax10.text(7, 1.8, table_content, ha='center', va='center', fontsize=10)
+
+ax10.set_xticks([])
+ax10.set_yticks([])
+ax10.axis('off')
+save_and_close("10_case_study_comparison")
+
+print("\nExtremophile Liquid Cooling Systems Visualization Complete!")
+print(f"\nAll PNG files saved to: {output_dir}/")
+print("\nGenerated files:")
+print("1. 01_biofouling_problem_overview.png")
+print("2. 02_microbial_transformation_timeline.png") 
+print("3. 03_treatment_methods_comparison.png")
+print("4. 04_extremophile_classification.png")
+print("5. 05_bio_centric_solutions_architecture.png")
+print("6. 06_environmental_operating_conditions.png")
+print("7. 07_implementation_challenges_matrix.png")
+print("8. 08_system_performance_metrics.png")
+print("9. 09_regulatory_framework_timeline.png")
+print("10. 10_case_study_comparison.png")
